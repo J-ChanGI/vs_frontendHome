@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- 폼태그에서 작성한 값을 전송  -
+            action 속성 : form 태그에서 작성한 값을 전송할 목적지 보통은 백엔드에서 지정한 주소값을 사용함 -->
+        <form action="join">
+            아이디 : <input type="text" name="id"><br>
+            비밀번호 : <input type="password" name="password"><br>
+            <input type="submit" value="가입">
+
+        </form>
+        http://127.0.0.1:5500/join?id=111&password=11
+        <!-- 가입 버튼을 클릭했더니 name 의 역할 주소값을 볼 수 있어야한다.-->
+
+        join?id=111&password=11
+    </body>
+
+</html>
