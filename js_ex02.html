@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, tr, td{
+                border: 5, solid ; 
+            }
+            tr:nth-child(even){
+                background-color: burlywood;
+            }
+        </style>
+        <script>
+            function kuku() {
+                
+                var result2 = "<table>";
+
+                for(var i = 2; i <10; i++){
+                    result2 += "<tr>";
+                    result2 += "<td>"+ i + "단</td>";
+                    for(var j = 1; j<10; j++){
+                        
+                         result2 += "<td>"+ i*j +  "</td>" ;
+                    }
+                    result2 +="</tr>"     
+                }
+                result2 += "<table>";
+                document.getElementById('result').innerHTML = result2;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="kuku()">구구단출력</button>
+        <p id="result"></p>
+    </body>
+</html>
+<!-- 구구단 출력 -->

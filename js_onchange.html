@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ 
+        function test2(){
+            var ele2 = document.getElementById('id5');
+            console.log(ele2.value);
+            document.getElementById('id4').value = ele2.value;
+        }
+    </script>
+</head>
+<body>
+ 
+    이메일 : <input type="text">
+    @
+    <input type="text" id="id4">
+    <select id="id5" onchange="test2()">
+        <option value="">직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="gmail.com">gmail.com</option>
+    </select>
+</body>
+</html>
