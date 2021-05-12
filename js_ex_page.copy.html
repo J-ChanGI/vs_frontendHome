@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- js파일 import -->
+ <script src="../js/joinfrom.js"></script>
+    <!-- css 파일 import -->
+<link rel="stylesheet" href="../css/joinform.css">
+
+</head>
+<body>
+    아이디 : <input type="text" id="id" value="" onblur="idcheck()"><br>
+    <p id="output"></p>
+
+    비밀번호 : <input type="text" id="pw" value="" onblur="pwd()"><br>
+    비밀번호 확인 : <input type="text" id="pwcheck" value="" onblur="pwcheck()"><br>
+    <p id="output2"></p>
+
+    이름 : <input type="text" id="name" value="" onblur="myname()"><br>
+    <p id="nameout"></p>
+
+    이메일 : <input type="text" id="'email"> @ <input type="text" id="email1">
+    <select id="email2" onchange="emails(this.value)">
+        <option value="">직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="gmail.com">gmail.com</option>
+    </select><br>
+    <br>
+    전화 번호 : <input type="text" id="phone" value="" onblur="phonenum()"><br>
+    <span id="phoneout"></span><br>
+
+
+    집주소 : <input type="text" id="sample4_postcode" placeholder="우편번호">
+    <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+    <input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+    <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+    <span id="guide" style="color:#999;display:none"></span>
+    <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+    <input type="text" id="sample4_extraAddress" placeholder="참고항목">
+    
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+   
+</body>
+</html>

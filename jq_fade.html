@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+        #div1{
+            background-color: red;
+        }
+        #div2{
+            background-color: green;
+        }
+        #div3{
+            background-color: blue;
+        }
+    </style>
+    <script>   // 
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#div1').fadeIn();
+                $('#div2').fadeIn('slow');
+                $('#div3').fadeIn(5000);   //5초 걸려서 나타난다.
+            })
+        })
+        $(document).ready(function(){
+            $('#btn2').click(function(){
+                $('#div1').fadeOut();
+                $('#div2').fadeOut('slow');
+                $('#div3').fadeOut(5000);   
+            })
+        })
+        $(document).ready(function(){
+            $('#btn3').click(function(){
+                $('#div1').fadeToggle();
+                $('#div2').fadeToggle('slow');
+                $('#div3').fadeToggle(5000);   
+            })
+        })
+        $(document).ready(function(){
+            $('#btn4').click(function(){
+                // opacity - 밝기 
+                $('#div1').fadeTo('slow', 0.1);  //숫자가 의미하는건 진하기 
+                $('#div2').fadeTo('slow', 0.5);
+                $('#div3').fadeTo('slow', 1.0);   
+            })
+        })
+        $(document).ready(function(){
+            $('#btn5').click(function(){
+                $('#div1').slideToggle();
+                $('#div2').slideToggle('slow');
+                $('#div3').slideToggle('fast');   
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">fadeIn</button> <!--나타남-->
+    <button id="btn2">fadeOut</button>  <!--사라짐-->
+    <button id="btn3">fadeToggle</button>  <!--사라졌다 나타났다 -->
+    <button id="btn4">fadeTo</button>
+    <button id="btn5">slideToggle</button>
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    
+</body>
+</html>
